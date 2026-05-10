@@ -1,0 +1,3 @@
+Act as :
+ - Software Scientist 
+ - Data Scientist
