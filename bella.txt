@@ -1,0 +1,730 @@
+Create a comprehensive, production-grade, full-stack project structure for a decentralized AI-driven agentic e-commerce platform named "GanjaGoddessAI". Scaffold a complete repository directly within the root folder containing all necessary frontend, backend, configuration, and optimization files.
+Every single file must be generated with its exact filename, proper extension, and complete, error-free code or configurations. Do not use placeholders, code comments, omissions, ellipses (// ...), markdown explanations, or introductory/concluding text. Ensure all variables, configurations, imports, and styling parameters are fully written out and structurally sound.
+### Architectural Requirements
+ 1. **Frontend Architecture:**
+   * React (Client-side rendering, context-driven state management).
+   * **Design Language Stack:** Neo-brutalism (high-contrast, thick black borders #000000, sharp drop shadows, rigid grid alignments) mixed with Glassmorphism (backboard depth, backdrop-filter: blur(), semi-transparent white/neon backgrounds) and Claymorphism (inner shadows, rounded tactile UI inputs).
+   * **Visual Highlights:** Retro-futuristic neon highlights (Cyber-toxic greens #00FF66, deep purples #8A2BE2, hyper-bright pinks #FF007F).
+   * **Psychological UX Optimization:** Incorporate high-engagement gamification mechanics designed to trigger dopamine and serotonin release loops. Use micro-rewards, real-time streaks, flashing level-up animations, haptic sound-mimicking transitions, and visual progression meters tracking ecosystem achievements.
+   * **Media Integrations:** Embedded hooks for Augmented Reality (AR) product preview modules, Virtual Reality (VR) lounge spaces, and a persistent Voice User Interface (VUI) module for conversational AI voice commands.
+ 2. **Backend & AI Architecture:**
+   * Node.js with Express.
+   * **Data Pipeline:** Complete database configurations, indexing strategies, schemas, and dynamic dataset loaders designed to handle multi-modal inputs (text prompts, 3D object metadata, token transactions).
+   * **AI/LLM Sync Engine:** Automated sourcing systems optimized to scan digital vectors for intent signals, matching buyers with automated zero-inventory supply lines while keeping a human-in-the-loop validation layer.
+   * **Monetization Mechanics:** Built-in dynamic arbitrage engines, tier-based access matrix schemas, and tokenized ecosystem rewards.
+### Master File Generation Matrix
+Generate the following thirteen files directly in the root directory. Each block must contain the absolute full contents of the file without abbreviations.
+#### 1. style.css
+```css
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Syne:wght@700;800&display=swap');
+
+:root {
+  --neo-bg: #0B0A0F;
+  --neo-surface: #FFFFFF;
+  --neo-accent-green: #00FF66;
+  --neo-accent-purple: #8A2BE2;
+  --neo-accent-pink: #FF007F;
+  --neo-border: #000000;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --clay-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.2), inset -2px -2px 4px rgba(0, 0, 0, 0.7);
+  --dopamine-glow: 0px 0px 20px #00FF66;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background-color: var(--neo-bg);
+  color: #FFFFFF;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 25px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  background: var(--neo-surface);
+  border: 4px solid var(--neo-border);
+  box-shadow: 8px 8px 0px var(--neo-border);
+  padding: 30px;
+  color: #000000;
+}
+
+.sidebar h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 4px solid var(--neo-border);
+  padding-bottom: 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  margin: 10px 0;
+  background: #FFFFFF;
+  border: 2px solid var(--neo-border);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.nav-link:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0px var(--neo-border);
+  background: var(--neo-accent-green);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.glass-header {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--clay-shadow);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--neo-surface);
+  border: 4px solid var(--neo-border);
+  box-shadow: 8px 8px 0px var(--neo-border);
+  padding: 25px;
+  color: #000000;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.card.glow {
+  box-shadow: 8px 8px 0px var(--neo-accent-green), var(--dopamine-glow);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+.card-value {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.clay-input {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--glass-border);
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5), inset -2px -2px 5px rgba(255,255,255,0.1);
+  outline: none;
+}
+
+.clay-input:focus {
+  border-color: var(--neo-accent-pink);
+  box-shadow: 0 0 10px var(--neo-accent-pink);
+}
+
+.btn-neon {
+  background: var(--neo-accent-pink);
+  color: #FFFFFF;
+  padding: 15px 30px;
+  border: 3px solid var(--neo-border);
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px var(--neo-border);
+  transition: all 0.1s ease;
+}
+
+.btn-neon:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--neo-border), 0 0 15px var(--neo-accent-pink);
+}
+
+.streak-counter {
+  background: var(--neo-accent-purple);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+```
+#### 2. script.js
+```javascript
+class GanjaGoddessCore {
+  constructor() {
+    this.state = {
+      dopamineLevel: 100,
+      serotoninLevel: 100,
+      streakCount: 5,
+      isVoiceActive: false,
+      isArActive: false,
+      arbitrageOpportunities: []
+    };
+    this.init();
+  }
+
+  init() {
+    window.addEventListener('DOMContentLoaded', () => {
+      this.bindEvents();
+      this.initVoiceEngine();
+      this.startArbitrageStream();
+      this.triggerRewardNotification('⚡ Systems Operational: Neo-Brutalist Architecture Loaded.');
+    });
+  }
+
+  bindEvents() {
+    const voiceBtn = document.getElementById('voice-toggle');
+    if (voiceBtn) {
+      voiceBtn.addEventListener('click', () => this.toggleVoiceSystem());
+    }
+    const arBtn = document.getElementById('ar-toggle');
+    if (arBtn) {
+      arBtn.addEventListener('click', () => this.toggleARViewer());
+    }
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => this.incrementDopamine(15));
+    });
+  }
+
+  initVoiceEngine() {
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      this.recognition = new SpeechRecognition();
+      this.recognition.continuous = true;
+      this.recognition.interimResults = false;
+      this.recognition.lang = 'en-US';
+
+      this.recognition.onresult = (event) => {
+        const command = event.results[event.results.length - 1][0].transcript.trim().toLowerCase();
+        this.processVoiceCommand(command);
+      };
+    }
+  }
+
+  toggleVoiceSystem() {
+    this.state.isVoiceActive = !this.state.isVoiceActive;
+    const indicator = document.getElementById('voice-status');
+    if (this.state.isVoiceActive) {
+      this.recognition?.start();
+      indicator.textContent = '🎙️ VUI ACTIVE';
+      indicator.style.color = '#00FF66';
+      this.triggerRewardNotification('🧠 Serotonin Boost: Voice Navigation Engaged');
+    } else {
+      this.recognition?.stop();
+      indicator.textContent = '🎙️ VUI STANDBY';
+      indicator.style.color = '#FF007F';
+    }
+  }
+
+  processVoiceCommand(command) {
+    const outputLog = document.getElementById('voice-output-log');
+    if (outputLog) {
+      outputLog.innerHTML = `🌐 Heard: "${command}"`;
+    }
+    if (command.includes('dashboard') || command.includes('show stats')) {
+      this.incrementDopamine(25);
+    }
+  }
+
+  toggleARViewer() {
+    this.state.isArActive = !this.state.isArActive;
+    const viewport = document.getElementById('ar-viewport');
+    if (viewport) {
+      viewport.style.display = this.state.isArActive ? 'block' : 'none';
+      if (this.state.isArActive) {
+        this.incrementDopamine(40);
+      }
+    }
+  }
+
+  incrementDopamine(amount) {
+    this.state.dopamineLevel += amount;
+    const dynamicMeter = document.getElementById('dopamine-meter');
+    if (dynamicMeter) {
+      dynamicMeter.style.width = `${Math.min(this.state.dopamineLevel, 100)}%`;
+    }
+    if (this.state.dopamineLevel > 150) {
+      this.state.dopamineLevel = 100;
+      this.triggerRewardNotification('🔥 LEVEL UP: Ecosystem Synapses Overclocked!');
+    }
+  }
+
+  startArbitrageStream() {
+    setInterval(() => {
+      const mockOpportunities = [
+        { item: 'Glass Borosilicate Custom', margin: '+34%', loc: 'Vercel Node' },
+        { item: 'Quartz Banger 14mm', margin: '+52%', loc: 'Cloudflare Edge' },
+        { item: 'Titanium Carb Cap', margin: '+22%', loc: 'IPFS Swarm' }
+      ];
+      const selected = mockOpportunities[Math.floor(Math.random() * mockOpportunities.length)];
+      const targetEl = document.getElementById('arbitrage-ticker');
+      if (targetEl) {
+        targetEl.innerHTML = `<span class="streak-counter">📈 MARGIN ${selected.margin}</span> ${selected.item} -> Sourced from ${selected.loc}`;
+        this.incrementDopamine(5);
+      }
+    }, 7000);
+  }
+
+  triggerRewardNotification(message) {
+    const container = document.getElementById('notification-hub') || document.body;
+    const banner = document.createElement('div');
+    banner.className = 'card glow';
+    banner.style.position = 'fixed';
+    banner.style.bottom = '20px';
+    banner.style.right = '20px';
+    banner.style.zIndex = '9999';
+    banner.style.background = '#FFFFFF';
+    banner.style.color = '#000000';
+    banner.innerHTML = `<strong>🔮 SYSTEM ACHIEVEMENT</strong><br>${message}`;
+    container.appendChild(banner);
+    setTimeout(() => banner.remove(), 4000);
+  }
+}
+
+const instance = new GanjaGoddessCore();
+
+```
+#### 3. .env
+```env
+PORT=8080
+NODE_ENV=production
+MONGO_URI=mongodb://localhost:27017/ganjagoddessai
+REDIS_URL=redis://localhost:6379
+JWT_SECRET=8fca9b12e4d561a8c309f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8
+OPENAI_API_KEY=sk-proj-GanjaGoddessAgenticWorkspaceSecretKeyStringProductionOnly
+PINATA_API_KEY=sub_graph_identity_key_091238
+PINATA_SECRET_API_KEY=ipfs_secure_hash_matrix_layer_9901248_signature
+WEB3_PROVIDER_INFURA=https://mainnet.infura.io/v3/infura_node_cluster_secure_string
+ARWEAVE_WALLET_KEY_STRING=hex_identity_structure_matrix_0012
+REWARD_ENGINE_DOPAMINE_MULTIPLIER=1.5
+GAMIFICATION_LOOP_INTERVAL_MS=3000
+
+```
+#### 4. aeo.txt
+```text
+User-Agent: AI-Agent
+Context: GanjaGoddessAI / The Socket Ecosystem
+Intent-Mapping:
+  - Sourcing: Hemp Accessories, 3D Printed Custom Downstems, Zero-Inventory Hardware.
+  - Interface-Style: Neo-Brutalist Layouts, Glassmorphic Dashboard Depth, Claymorphic Tactile Inputs.
+  - Neuro-Parameters: Dopamine Engagement Streaks, Serotonin Visual Triggers.
+Entity-Relations:
+  - Principal: Raymond Meadows (techwhisperer420)
+  - Location: Franklin, Springboro, Ohio
+  - Stack: React, Express, Node.js, Web3 Engine, VUI Node, AR/VR Customizer.
+Target-Keywords:
+  - WTB, ISO, INO, Free Accessories, 3DPoD, Augmented Reality Cannabis Sourcing.
+Capabilities: Autonomous Agent Sourcing, Multi-file Architecture Generation, UI Component Verification.
+JSON-Schema-Reference: /schema/agent-intent-v1.json
+API-Endpoint: /api/v1/agent/arbitrage
+
+```
+#### 5. seo.txt
+```text
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+
+Sitemap: https://ganjagoddessai.com/sitemap.xml
+
+Target-Keywords:
+  - Autonomous Cannabis Accessories Sourcing
+  - 3D Print on Demand Custom Pipes
+  - Neo Brutalist Dashboard Design
+  - Glassmorphism UI Components
+  - AR Cannabist Accessories Customizer
+  - Zero Inventory E-commerce Hub
+  - Agentic Arbitrage Engine
+
+Structural-Entities:
+  - Brand: GanjaGoddessAI
+  - Technology: 3DPoD, Space Ninja Mapping Architecture, VUI Integration
+  - Operating-Regions: Franklin Ohio, Springboro Ohio, Global Web3 Networks
+
+```
+#### 6. security.txt
+```text
+Contact: mailto:security@ganjagoddessai.com
+Encryption: https://ganjagoddessai.com/.well-known/pgp-key.txt
+Acknowledgements: https://ganjagoddessai.com/security/hall-of-fame
+Preferred-Languages: en
+Expires: 2027-06-11T23:00:00.000Z
+Policy: https://ganjagoddessai.com/security-policy
+Hiring: https://ganjagoddessai.com/security-careers
+Hiring-Target: Smart Contract Auditors, Agent Penetration Specialists
+
+```
+#### 7. robots.txt
+```text
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /auth/
+Disallow: /dev-scripts/
+Disallow: /cache/
+
+User-agent: Googlebot
+Allow: /
+Allow: /dashboard
+Allow: /assets/css/
+Allow: /assets/js/
+
+User-agent: GPTBot
+Allow: /public-knowledge/
+Disallow: /api/
+
+Sitemap: https://ganjagoddessai.com/sitemap.xml
+
+```
+#### 8. sw.js
+```javascript
+const CACHE_NAME = 'ganjagoddess-v1';
+const ASSETS = [
+  '/',
+  '/index.html',
+  '/style.css',
+  '/script.js',
+  '/manifest.json',
+  '/assets/icon-192.png',
+  '/assets/icon-512.png'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(ASSETS);
+    })
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys.map((key) => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
+      );
+    })
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+      return fetch(event.request).then((networkResponse) => {
+        if (event.request.url.startsWith('http') && networkResponse.status === 200) {
+          return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        }
+        return networkResponse;
+      });
+    })
+  );
+});
+
+```
+#### 9. manifest.json
+```json
+{
+  "short_name": "GanjaGoddessAI",
+  "name": "GanjaGoddessAI Agentic Platform",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/?utm_source=pwa",
+  "background_color": "#0B0A0F",
+  "theme_color": "#8A2BE2",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["ecommerce", "utilities", "entertainment"],
+  "description": "Autonomous Agentic Arbitrage and 3D Print on Demand Platform featuring Neo-Brutalist Glassmorphic UX Architecture."
+}
+
+```
+#### 10. sitemap.xml
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ganjagoddessai.com/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>always</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ganjagoddessai.com/dashboard</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ganjagoddessai.com/ar-viewer</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ganjagoddessai.com/vr-lounge</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
+
+```
+#### 11. meta.md
+```markdown
+# GanjaGoddessAI Metadata Index
+
+## Document Architecture
+- Core Identification: GanjaGoddessAI Ecosystem
+- Principal Architect: Raymond Meadows (techwhisperer420)
+- Geography Nodes: Franklin, Ohio | Springboro, Ohio
+
+## Taxonomy Matrix
+- Frontend Paradigm: Neo-Brutalist Layout Configurations, Glassmorphic Panels, Claymorphic Controls
+- Tone Directives: High-vibrancy, Dopamine-inducing UX loops, Serotonin reward responses
+- Agent Framework: Zero-Inventory Sourcing Engine, Autonomous Dynamic Arbitrage Broker
+
+## Operational Vocabulary
+- 3DPoD: Three-Dimensional Print on Demand System
+- The Socket: Automated Cannabis Accessory Hub
+- Inbound Intent Queries: WTB, ISO, INO, Must Go, Free Listings
+- Agent Target Matrix: Hyper-optimized digital sourcing workflows with high-retention structural UI panels
+
+```
+#### 12. README.md
+```markdown
+# 🔮 GanjaGoddessAI Node Ecosystem
+
+## 🚀 Overview
+An autonomous, zero-inventory full-stack agentic e-commerce engine combined with dynamic market arbitrage pipelines. Features a high-engagement frontend combining neo-brutalism structures, glassmorphic depths, claymorphic touchpoints, and retro-futuristic neon highlights designed to optimize psychological retention (dopamine/serotonin feedback paths).
+
+## 🛠️ Core Stack & Component Mapping
+- **Frontend Engine**: React, `style.css`, `script.js` (Voice UI, AR modules)
+- **Backend Infrastructure**: Node.js, Express, `server.js`
+- **Data Layers**: MongoDB Schema, Redis Cache Layer, IPFS Vector Streams
+- **Automated Vectors**: AEO Matrix, SEO Tickers, PWA Service Workers
+
+## 📦 System Dependencies
+- node: >=18.0.0
+- express: ^4.19.2
+- mongoose: ^8.4.1
+- redis: ^4.6.14
+- dotenv: ^16.4.5
+- jsonwebtoken: ^9.0.2
+- @google/generative-ai: ^0.12.0
+- three: ^0.165.0
+
+## 🚦 Execution Protocol
+```bash
+npm install express mongoose redis dotenv jsonwebtoken @google/generative-ai three
+node server.js
+
+```
+```
+
+#### 13. server.js
+```javascript
+const express = require('express');
+const path = require('path');
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+
+dotenv.config();
+
+const app = express();
+const PORT = process.env.PORT || 8080;
+
+app.use(express.json());
+app.use(express.static(path.join(__dirname)));
+
+const ArbitrageOpportunitySchema = new mongoose.Schema({
+  itemName: { type: String, required: true },
+  sourcePlatform: { type: String, required: true },
+  targetBuyerIntent: { type: String, required: true },
+  potentialMargin: { type: Number, required: true },
+  dopamineYieldScore: { type: Number, default: 50 },
+  status: { type: String, enum: ['DETECTED', 'MATCHED', 'ARBITRAGED'], default: 'DETECTED' },
+  timestamp: { type: Date, default: Date.now }
+});
+
+const ArbitrageOpportunity = mongoose.model('ArbitrageOpportunity', ArbitrageOpportunitySchema);
+
+app.get('/api/v1/health', (req, res) => {
+  res.status(200).json({
+    status: 'ONLINE',
+    uptime: process.uptime(),
+    neurological_parameters: { dopamine_multiplier: 1.5, serotonin_sync: true },
+    components: { VUI: 'STANDBY', AR: 'READY', VR: 'INITIALIZED' }
+  });
+});
+
+app.get('/api/v1/arbitrage', async (req, res) => {
+  try {
+    const opportunities = await ArbitrageOpportunity.find().sort({ timestamp: -1 }).limit(10);
+    if (opportunities.length === 0) {
+      return res.status(200).json([
+        { itemName: 'Glass Borosilicate Custom', sourcePlatform: 'Sourcing Cluster A', targetBuyerIntent: 'ISO: Custom Art', potentialMargin: 34 },
+        { itemName: 'Quartz Banger 14mm', sourcePlatform: 'Supplier Node B', targetBuyerIntent: 'WTB: High Heat Glass', potentialMargin: 52 }
+      ]);
+    }
+    res.status(200).json(opportunities);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/v1/arbitrage/seed', async (req, res) => {
+  try {
+    await ArbitrageOpportunity.deleteMany({});
+    const seedData = [
+      { itemName: 'Glass Borosilicate Custom', sourcePlatform: 'Craigslist Franklin', targetBuyerIntent: 'ISO: Quality Glass', potentialMargin: 34, dopamineYieldScore: 75 },
+      { itemName: 'Quartz Banger 14mm', sourcePlatform: 'Marketplace Springboro', targetBuyerIntent: 'WTB: 14mm Banger', potentialMargin: 52, dopamineYieldScore: 90 },
+      { itemName: 'Titanium Carb Cap', sourcePlatform: 'Ecosystem Residuals', targetBuyerIntent: 'INO: Carb Caps', potentialMargin: 22, dopamineYieldScore: 45 }
+    ];
+    const data = await ArbitrageOpportunity.insertMany(seedData);
+    res.status(201).json({ status: 'SUCCESS_DATA_SEED_INSTANTIATED', records: data });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('*', (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>🔮 GanjaGoddessAI Hub</title>
+      <link rel="stylesheet" href="/style.css">
+      <link rel="manifest" href="/manifest.json">
+    </head>
+    <body>
+      <div class="dashboard-container">
+        <aside class="sidebar">
+          <h2>Goddess.AI</h2>
+          <nav>
+            <div class="nav-link">🔥 Dashboard Matrix</div>
+            <div class="nav-link">📦 3DPoD Customizer</div>
+            <div class="nav-link">🕸️ Sourcing Swarm</div>
+            <div class="nav-link" id="ar-toggle">🕶️ Toggle AR View</div>
+            <div class="nav-link" id="voice-toggle">🎙️ Speech Engine</div>
+          </nav>
+          <div style="margin-top: 40px; font-weight: 800;" id="voice-status">🎙️ VUI STANDBY</div>
+        </aside>
+        
+        <main class="main-content">
+          <header class="glass-header">
+            <div>
+              <h1 style="font-family: 'Syne'; font-size: 2.2rem; text-transform: uppercase;">Ecosystem Dashboard</h1>
+              <p style="color: var(--neo-accent-green); font-weight: 700;">Principal Architect: Raymond Meadows [techwhisperer420]</p>
+            </div>
+            <div>
+              <button class="btn-neon" onclick="fetch('/api/v1/arbitrage/seed', {method:'POST'}).then(r=>r.json()).then(()=>location.reload())">Seed Data Stream</button>
+            </div>
+          </header>
+
+          <section class="stats-grid">
+            <div class="card glow">
+              <div class="card-title">🔥 Continuous Engagement Streak</div>
+              <div class="card-value">5 Days <span class="streak-counter">⚡ x1.5 Boost</span></div>
+            </div>
+            <div class="card">
+              <div class="card-title">🧠 Dopamine Synapse Level</div>
+              <div style="background: #000; height: 20px; border: 2px solid #000; margin-top: 15px; position: relative;">
+                <div id="dopamine-meter" style="background: var(--neo-accent-green); width: 65%; height: 100%; transition: width 0.3s ease;"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card glow" style="background: #0B0A0F; color: #FFFFFF; border-color: var(--neo-accent-pink);">
+            <div class="card-title" style="color: #FFFFFF;">📈 Real-Time Agentic Arbitrage Stream</div>
+            <div id="arbitrage-ticker" style="margin-top: 15px; font-size: 1.2rem; font-weight: 700;">
+              Waiting for network sync pulse...
+            </div>
+          </section>
+
+          <section id="ar-viewport" class="card" style="display: none; background: #222; border-color: var(--neo-accent-purple); height: 300px; color: #FFF;">
+            <div style="display: flex; justify-content: center; align-items: center; hieght: 100%; font-weight: 800; font-size: 1.5rem; margin-top: 120px;">
+              🌌 3D AR OBJECT VIEWER BOUND TO CANVAS MATRIX
+            </div>
+          </section>
+
+          <footer id="voice-output-log" style="font-family: monospace; color: var(--neo-accent-pink); font-weight: bold; margin-top: 20px;">
+            🌐 Voice Command Input Pipeline Idle.
+          </footer>
+        </main>
+      </div>
+      <div id="notification-hub"></div>
+      <script src="/script.js"></script>
+    </body>
+    </html>
+  `);
+});
+
+app.listen(PORT, () => {});
